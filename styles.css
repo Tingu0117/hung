@@ -1,0 +1,112 @@
+/* 全域樣式 */
+:root {
+    --primary-blue: #87CEEB; /* 天空藍 */
+    --secondary-blue: #B0E0E6; /* 粉藍色 */
+    --light-blue: #F0F8FF; /* 愛麗絲藍 */
+    --dark-blue: #4682B4; /* 鋼藍色 */
+}
+
+body {
+    font-family: 'Microsoft JhengHei', sans-serif;
+}
+
+/* 導航欄樣式 */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(135, 206, 235, 0.95) !important;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #2F4F4F !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--dark-blue) !important;
+}
+
+.navbar-toggler {
+    background-color: var(--light-blue);
+}
+
+/* 首頁區塊樣式 */
+.hero-section {
+    height: 100vh;
+    background: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #2F4F4F;
+}
+
+/* 各區塊間距 */
+section {
+    padding-top: 80px;
+}
+
+/* 區塊標題樣式 */
+section h2 {
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-blue);
+}
+
+/* 照片集效果 */
+.gallery img {
+    transition: transform 0.3s ease;
+    border: 3px solid var(--light-blue);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-blue);
+}
+
+/* 行程卡片樣式 */
+.card {
+    border: none;
+    box-shadow: 0 2px 15px rgba(135, 206, 235, 0.1);
+    transition: transform 0.3s ease;
+    background-color: var(--light-blue);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(135, 206, 235, 0.2);
+}
+
+.card-title {
+    color: var(--dark-blue);
+}
+
+/* 簡介區塊樣式 */
+#profile h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+}
+
+#profile ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--secondary-blue);
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    section {
+        padding-top: 60px;
+    }
+}
